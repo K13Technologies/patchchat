@@ -1,0 +1,176 @@
+#live-map {
+	min-height: 400px;
+	height: 100%;
+	position: relative;
+    z-index: 2;
+}
+
+#map-wrapper {
+    position: relative;
+    z-index: 1;
+}
+#geolocate {
+    float:left;
+}
+
+#legend {
+    text-align:right;
+    z-index: 1000;
+    position: relative;
+    .dropdown-menu {
+    left: auto !important;
+    right: 0 !important;
+        min-width: 260px; 
+        li {
+            padding-left: 10px;
+        }  
+    }
+    padding: 10px 20px;
+}
+.btn-industry-mining {
+    background: #8a5728;
+    color: #fff;
+    &:hover {
+        color: #fff;
+        background: lighten(#8a5728,10%);
+    }
+}
+.btn-industry-energy {
+    background: #ebebe8;
+    &:hover {
+        background: lighten(#ebebe8,10%);
+    }
+}
+.btn-industry-solar {
+    background: #f6e414;
+    &:hover {
+        background: lighten(#f6e414,10%);
+    }
+}
+.btn-industry-wind {
+    background: #f3a520;    
+    &:hover {
+        background: lighten(#f3a520,10%);
+    }
+}
+.btn-industry-hydro {
+    background: #538bc9;
+    color: #fff;
+    &:hover {
+        color: #fff;
+        background: lighten(#538bc9,10%);
+    }
+}
+.btn-industry-forestry {
+    background: #417538;
+    color: #fff;
+    &:hover {
+        color: #fff;
+        background: lighten(#417538,10%);
+    }
+}
+
+.maps {
+    .map-sp {
+        background: #fff;
+        padding-bottom: 20px;
+    }
+    
+    .sps-item {
+        margin: 0 20px 20px;
+        padding: 0;
+        display: inline-block;        
+    }
+    .sps-img {
+        width: 175px;
+    }
+    
+}
+
+
+
+// this is multiplier, from 44px
+@icons-size: 0.33;
+
+.leaflet-marker-icon.pcmi {
+	background: url(/img/map-icons.png) no-repeat;
+	border-radius: 17px;
+	overflow: hidden;
+	
+    &.pcmi-css,
+    &.pcmi-refinery,
+    &.pcmi-upgrader,
+    &.pcmi-extractionplant {
+		background-position: @icons-size*(-704px) @icons-size*(-503px);
+	}
+	&.pcmi-compressor {
+		background-position: @icons-size*(-512px) @icons-size*(-600px);
+	}
+	&.pcmi-gasplant {
+		background-position: @icons-size*(-125px) @icons-size*(-697px);
+	}
+	&.pcmi-battery {
+		background-position: @icons-size*(-125px) @icons-size*(-888px);
+	}
+	&.pcmi-openpit {	
+		background-position: @icons-size*(-125px) @icons-size*(-215px);
+	}
+	&.pcmi-camp {
+		background-position: @icons-size*(-320px) @icons-size*(-697px);
+	}
+	&.pcmi-cogenerator {
+		background-position: @icons-size*(-28px) @icons-size*(-697px);
+	}
+	&.pcmi-generator {
+		background-position: @icons-size*(-896px) @icons-size*(-409px);
+	}
+	&.pcmi-welldisposal {
+		background-position: @icons-size*(-896px) @icons-size*(-312px);
+	}
+	&.pcmi-oilsand {
+		background-position: @icons-size*(-125px) @icons-size*(-122px);
+    }
+	&.pcmi-scale {	
+		background-position: @icons-size*(-320px) @icons-size*(-409px);
+	}
+	&.pcmi-hydro {
+		background-position: @icons-size*(-415px) @icons-size*(-215px);
+	}
+	&.pcmi-dam {
+		background-position: @icons-size*(-896px) @icons-size*(-697px);
+	}
+	&.pcmi-gaswell {
+		background-position: @icons-size*(-609px) @icons-size*(-888px);
+	}
+	&.pcmi-hydrogenerator {
+		background-position: @icons-size*(-25px) @icons-size*(-599px);
+	}
+	&.pcmi-woodpower {
+		background-position: @icons-size*(-222px) @icons-size*(-122px);
+	}
+	&.pcmi-nuke {
+		background-position: @icons-size*(-25px) @icons-size*(-793px);
+	}
+	&.pcmi-coal {
+		background-position: @icons-size*(-25px) @icons-size*(-216px);
+	}
+	&.pcmi-uranium {
+		background-position: @icons-size*(-125px) @icons-size*(-793px);
+	}
+	&.pcmi-mine {
+		background-position: @icons-size*(-25px) @icons-size*(-25px);
+	}
+	&.pcmi-sagd {
+		background-position: @icons-size*(-416px) @icons-size*(-697px);
+	}
+	
+	&.pcmi-wind {
+		background-position: @icons-size*(-220px) @icons-size*(-599px);
+	}
+	&.pcmi-solar {
+		background-position: @icons-size*(-220px) @icons-size*(-697px);
+	}
+	&.pcmi-well {
+		background-position: @icons-size*(-609px) @icons-size*(-504px);
+	}
+}

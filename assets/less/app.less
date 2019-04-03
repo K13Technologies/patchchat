@@ -1,0 +1,618 @@
+@import "../../../bower_components/bootstrap/less/bootstrap";
+@import (inline)  "../../../bower_components/magnific-popup/dist/magnific-popup.css";
+@import (inline)  "../../../bower_components/summernote/dist/summernote.css";
+@import "sprites.less";
+
+@font-family-sans-serif: "Lato", Helvetica, Arial, sans-serif;
+@body-bg: #f8f8f8;
+@brand-primary: #417505; 
+/* 1729b0 - blue, 417505, 348014 - green */
+@brand-secondary: #00b64f;
+@brand-dark: #034769;
+
+@font-size-base: 16px;
+@line-height-base: 1.6;
+@navbar-height: 80px;
+
+@navbar-default-bg:    #fff;
+@breadcrumb-bg: transparent;
+
+body { 
+	position: relative;
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+p { 
+	margin-bottom: 1em;
+}
+.breadcrumb {
+    margin-bottom: 0;
+}
+.container-fluid {
+    max-width: 1200px;
+}
+.jumbotron {
+	background-size: cover;
+	background-position: center center;
+	margin-bottom: 0;
+	h1 {
+		text-align: center;
+		text-transform: uppercase;
+		color: #fff;
+		text-shadow: 0px 0px 10px #000 ;
+	}	
+	h2,h3 {
+		text-align: center;
+		color: #fff;
+		line-height: 1.5;
+	}
+}
+
+#home-jumbotron {
+	background: url(/img/bg-home.jpg) no-repeat center center;
+	background-size: cover;
+}
+#energy-jumbotron {
+	background-image: url(/img/bg-energy-ca.jpg);	
+}
+.locale-en_us #energy-jumbotron {
+	background-image: url(/img/bg-energy-us.jpg);	
+}
+#mining-jumbotron {
+	background-image: url(/img/bg-mining.jpg);	
+}
+#wind-jumbotron {
+	background-image: url(/img/bg-wind.jpg);	
+}
+#solar-jumbotron {
+	background-image: url(/img/bg-solar.jpg);	
+}
+#hydro-jumbotron {
+	background-image: url(/img/bg-hydro.jpg);	
+}
+#forestry-jumbotron {
+	background-image: url(/img/bg-forestry.jpg);	
+}
+
+
+#home-carousel {
+	.item {
+		background-size: cover;
+		background-position: center center!important;
+		width: 100%;
+		height: 500px;
+	}
+	.carousel-control {
+		.fa {
+			font-size: 100px;
+			top: 40%!important;			
+		}
+	}
+	.carousel-control.right {
+		.fa {
+			.carousel-control .icon-next;			
+		}
+	}
+	.carousel-control.left {
+		.fa {
+			.carousel-control .icon-prev;			
+		}
+	}
+}
+
+.callouts {
+	display: table;
+	border-collapse: separate; 
+	border-spacing: 40px 0px; 
+	margin: 40px auto;
+	.callouts-row {
+		display: table-row;
+	}
+	.callouts-cell {
+		display: table-cell;
+		width: 33%;
+		border-left: 1px solid #ccc;
+		border-right: 1px solid #ccc;
+		background: #fafafa;
+		position: relative;
+		padding-bottom: 0px;
+	}
+	.callout-button {
+		text-align: center;
+		padding-bottom: 40px;
+		border-bottom: 1px solid #ccc;
+	}
+	
+	.callout {
+		padding: 10px 20px 10px;
+		text-align: center;
+		/*font-size: 110%;*/
+		color: @gray-light;		
+	}
+	h3 {
+		line-height: 1.5;
+		text-align:center;
+		text-transform: uppercase;
+		margin: 10px 20px 20px;
+		/*font-size: 24px;*/
+		
+	}
+	.callout-icon {
+		text-align: center;
+		font-size: 96px;
+		color: @gray-light;
+		border-top: 1px solid #ccc;			
+	}
+}
+
+.navbar.navbar-default {
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px 40px 20px;
+    margin-bottom: 0;  
+    .navbar-toggle {
+        float: none;
+        position: absolute;
+        right: 0;
+    }      
+}
+.navbar-default .navbar-brand {
+    position: relative;
+    z-index: 1;
+	font-size: 40px;
+	/*margin-left: 0 !important;*/
+	color: @brand-dark;
+	line-height: 1;
+	padding:13px 0 7px;
+	
+	.brand-logo {
+	    display: block;
+	    position: static;
+	    height: 75px;
+	    float: left;
+	    margin-right: 20px;
+	    margin-top: -6px;
+	}
+	small {	
+		display: block;
+		/*float: left;				*/
+		font-style: italic;
+		text-weight: 100;
+		font-size: 16px;
+		color: #ccc;		
+		padding-top: 10px;
+		white-space: nowrap;
+	}
+	margin-right: 20px;
+}
+
+
+
+
+.container-small {
+    .container;
+    max-width: 750px;
+}
+.content {
+    background: #fff;
+    padding: 40px 60px;
+	border: 1px solid @gray-lighter;
+	
+}
+.page-header {
+	background: #fafafa;
+    padding-top: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+    h1 {
+        margin-top: 0;
+    }
+}
+
+.section-white {
+	background: #fff;
+} 
+
+.section-padded {
+	padding: 40px 0;
+} 
+
+.bottom-border {
+	border-bottom: 1px solid @gray-lighter;
+}
+.section-large {
+	font-size: 120%;
+	h1 {
+		margin-bottom: 1em;
+	}
+	p { 
+		margin-bottom: 1.5em;
+	}
+	
+}
+
+#frmSearch {
+	background: rgba(0,0,0,0.5);
+	width: 70%;
+	margin: 100px auto 50px;
+	padding: 20px;
+	.btn {
+		width: 100%;
+	}	
+	color: #fff;
+	a {
+		color: #fff;
+	}
+
+}
+
+#footer {	
+    width: 100%;
+    background-color: #fff;
+    padding-top: 20px;
+    font-size: 14px;
+    border-top: 1px solid #f0f0f0;
+    .highlight {
+        color: @brand-primary;
+    }
+    a {
+    	color: #999 !important; 
+    }
+}
+.nav-footer {
+    text-align: left;
+    .clearfix;
+    h4 {
+        text-transform: uppercase;
+    }
+	> li {	    
+		display: block;
+		padding: 5px 20px 10px;
+		float: left;
+		ul {
+		    margin: 0;
+		    padding: 0;
+		    list-style: none;
+		    li {
+		        margin: 0;
+		        padding: 0;    
+		    }
+		}
+	}
+}
+
+
+.search-result {
+	border-bottom: 1px solid @gray-lighter;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+
+#featured-photo,
+.tab-pane {
+	padding: 30px;
+	border: 1px solid @gray-lighter;
+	margin: 20px 0;
+	background: #fff;
+	
+	h3 {
+		margin-top: 0;
+	}
+}
+
+.inner-anchor {
+	position: relative;
+	margin-top: -100px;
+	padding-top: 100px;
+}
+
+.management-photos-link {
+	position: absolute;
+	right: 50px;
+	bottom: 50px;
+	background: rgba(255,255,255,0.6);
+	border-radius: 10px;
+	width: 100px;
+	height: 100px;
+	padding: 15px 10px;
+	color: @gray-dark;
+	text-align:center;
+	font-size: 12px;
+	text-decoration: none !important;
+	
+	.fa { 
+		display: block; 
+		font-size: 60px; 
+	}
+	span {
+		display: block;
+		color: #000;
+	}
+}
+
+#featured-photo {
+	padding: 0;
+	margin: 0 0 20px;
+}
+.nav-sticky {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: #fff;
+	padding: 20px 0;
+	.nav { .container; }
+	border-bottom: 1px solid @gray-lighter;
+	z-index:1000;
+	
+}
+#facility-map {
+	height: 400px;
+}
+.mapbox-directions-route-details,
+.mapbox-directions-step-maneuver {
+    font-size: @font-size-base !important;
+    color: #666 !important;
+}
+
+.mapbox-directions-step,
+.mapbox-directions-routes li,
+.mapbox-directions-routes li:hover, 
+.mapbox-directions-step-distance,
+.mapbox-directions-routes .mapbox-directions-route-active,
+.mapbox-directions-direction,
+.mapbox-directions-way-name,
+.mapbox-directions-step-distance {
+    color: #333 !important;
+    font-size: @font-size-base !important;
+}
+.mapbox-directions-steps {
+    .list-group;
+}
+.mapbox-directions-step {
+    .list-group-item;
+}
+.mapbox-directions-icon {
+    background-image: url(/img/mapbox-directions.png)!important;
+}
+.mapbox-directions-step-distance {
+    left: auto!important;
+    right: 0 !important;
+    top: 15px !important;
+    bottom: auto !important;
+}
+.mapbox-directions-route-heading {
+    left: 0 !important;
+    font-weight: bold;
+}
+.mapbox-directions-route {
+    margin-top: 20px;
+}
+.mapbox-directions-errors.mapbox-error-active {
+    .alert;
+    .alert-danger;
+    margin-top: 20px;
+}
+.mapbox-directions-error {
+    color: #a94442 !important;
+}
+
+
+.facility-location {    
+	font-size: 90%;
+	padding: 0.5em 0;
+	color: @gray-light;
+	a {
+		color: @gray-light;		
+	}
+	.separator {
+		display: inline-block;
+		padding: 0 0.5em;
+	}
+	.fa { 
+		margin-right: 0.5em; 
+	}
+}
+
+#inner-nav {
+	padding: 10px 20px 0;
+	li {
+		margin: 0 10px 0 30px;
+		padding: 10px;
+		border-bottom: 5px solid #fff;
+		position: relative;
+		
+		a { 
+			background: transparent !important;
+		}			
+	}
+	li:after {
+		content: " ";
+		display: block;
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		right: 0; 
+		margin-right: -20px;
+		top: 20px;				
+		border-right: 1px solid @gray-lighter;
+	}
+	li.active > a, 
+	li.active > a:hover,
+	li.active > a:focus {
+		background: transparent!important;
+		color: @brand-primary;
+	}
+	
+	li.active,
+	li:hover,
+	li:focus {
+		background: transparent!important;
+		border-bottom: 5px solid @brand-primary;
+	}
+		
+}
+
+.header-star-rating { 
+	margin-right: 1em;
+}
+
+.facility-featured-photo-wrap {
+	display: block;
+	width: 100%;
+	height: 320px;
+	overflow: hidden;
+	position: relative;
+	
+	.facility-featured-photo {
+		display: block;
+		position: absolute;
+		width: 100%;	
+		top: -9999px;
+	    bottom: -9999px;
+	    left: -9999px;
+	    right: -9999px;
+	    margin: auto;	
+	}	
+}
+
+.facility-icon {
+	width: 90px;
+	height: 90px;
+	overflow: hidden;
+	
+	@icons-size: 1;
+
+	background: url(/img/icons.png) no-repeat;
+
+    &.facility-icon-css,
+    &.facility-icon-refinery,
+    &.facility-icon-upgrader,
+    &.facility-icon-extractionplant {
+		background-position: @icons-size*(-704px) @icons-size*(-503px);
+	}
+	&.facility-icon-compressor {
+		background-position: @icons-size*(-512px) @icons-size*(-600px);
+	}
+	&.facility-icon-gasplant {
+		background-position: @icons-size*(-125px) @icons-size*(-697px);
+	}
+	&.facility-icon-battery {
+		background-position: @icons-size*(-125px) @icons-size*(-888px);
+	}
+	&.facility-icon-openpit {
+		background-position: @icons-size*(-125px) @icons-size*(-215px);
+	}
+	&.facility-icon-camp {
+		background-position: @icons-size*(-320px) @icons-size*(-697px);
+	}
+	&.facility-icon-cogenerator {
+		background-position: @icons-size*(-28px) @icons-size*(-697px);
+	}
+	&.facility-icon-generator {
+		background-position: @icons-size*(-896px) @icons-size*(-409px);
+	}
+	&.facility-icon-welldisposal {
+		background-position: @icons-size*(-896px) @icons-size*(-312px);
+	}
+	&.facility-icon-oilsand {
+		background-position: @icons-size*(-125px) @icons-size*(-122px);
+    }
+	&.facility-icon-scale {	
+		background-position: @icons-size*(-320px) @icons-size*(-409px);
+	}
+	&.facility-icon-hydro {
+		background-position: @icons-size*(-415px) @icons-size*(-215px);
+	}
+	&.facility-icon-dam {
+		background-position: @icons-size*(-896px) @icons-size*(-697px);
+	}
+	&.facility-icon-gaswell {
+		background-position: @icons-size*(-609px) @icons-size*(-888px);
+	}
+	&.facility-icon-hydrogenerator {
+		background-position: @icons-size*(-25px) @icons-size*(-599px);
+	}
+	&.facility-icon-woodpower {
+		background-position: @icons-size*(-222px) @icons-size*(-122px);
+	}
+	&.facility-icon-nuke {
+		background-position: @icons-size*(-25px) @icons-size*(-793px);
+	}
+	&.facility-icon-coal {
+		background-position: @icons-size*(-25px) @icons-size*(-216px);
+	}
+	&.facility-icon-uranium {
+		background-position: @icons-size*(-125px) @icons-size*(-793px);
+	}
+	&.facility-icon-mine {
+		background-position: @icons-size*(-25px) @icons-size*(-25px);
+	}
+	&.facility-icon-sagd {
+		background-position: @icons-size*(-416px) @icons-size*(-697px);
+	}
+	
+	&.facility-icon-wind {
+		background-position: @icons-size*(-220px) @icons-size*(-599px);
+	}
+	&.facility-icon-solar {
+		background-position: @icons-size*(-220px) @icons-size*(-697px);
+	}	
+	&.facility-icon-well {
+		background-position: @icons-size*(-609px) @icons-size*(-504px);
+	}
+}
+
+.pcad {
+	margin-top: 20px;
+	text-align: center;
+}
+.pcad-320-250 {
+	margin-top: 0;
+	text-align: right;
+}
+
+.your-star-rating {
+	font-size: 24px;
+}
+
+.sps {
+    .clearfix;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+.sps-img {
+    width: 200px;
+    height: auto;
+    display: inline-block;
+}
+.sps-item {
+    margin: 0 0px 50px;
+    padding: 0;
+    display: inline-block;        
+}
+.popover.right {
+	width: 250px;
+}
+.popover.top {
+	max-width: 500px;
+}
+
+
+@import "map.less";
+
+@media (max-width: @screen-xs-max) { 
+    .navbar-brand {
+        .navbar-brand {
+            float: none;
+            small {
+                clear: left;
+                
+            }
+        }
+    }
+}
