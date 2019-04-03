@@ -1,0 +1,9 @@
+{
+  "name": "patchchat",
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "angular-modal-service": "~0.6.7",
+    "summernote": "~0.6.16",
+    "angular-summernote": "~0.4.0"
+  }
+}
